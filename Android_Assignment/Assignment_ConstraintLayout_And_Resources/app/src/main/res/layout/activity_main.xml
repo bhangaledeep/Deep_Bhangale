@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:id="@+id/imageBitcodeLogo"
+        android:src="@drawable/bitcode_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@style/style_1" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/welcome_to_bitcode"
+        android:textSize="25sp"
+        android:textColor="@color/blue"
+        style="@style/style_1"
+        app:layout_constraintTop_toBottomOf="@+id/imageBitcodeLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/enquiryTextView"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="@string/enquiry_form"
+        android:textSize="17sp"
+        android:textColor="@color/red"
+        style="@style/style_1"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/nameTextView"
+        style="@style/style_1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@+id/nameEditText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enquiryTextView" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_height="45dp"
+        android:layout_width="240dp"
+        android:textSize="17sp"
+        android:hint="Enter the name"
+        android:background="@drawable/edittext_border"
+        style="@style/style_1"
+        app:layout_constraintTop_toBottomOf="@id/enquiryTextView"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/phoneTextView"
+        style="@style/style_1"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/phone"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_height="45dp"
+        android:layout_width="240dp"
+        android:textSize="17sp"
+        android:hint="Enter phone number"
+        android:background="@drawable/edittext_border"
+        android:inputType="phone"
+        style="@style/style_1"
+        app:layout_constraintTop_toBottomOf="@id/nameEditText"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/emailIdTxtView"
+        style="@style/style_1"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/email_id"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneTextView" />
+
+    <EditText
+        android:id="@+id/emailIdEditText"
+        android:layout_height="45dp"
+        android:layout_width="240dp"
+        android:textSize="17sp"
+        android:hint="Enter email ID"
+        android:background="@drawable/edittext_border"
+        style="@style/style_1"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/phoneEditText"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/addressTextView"
+        style="@style/style_1"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/address"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailIdTxtView" />
+
+    <EditText
+        android:id="@+id/addressEditText"
+        style="@style/style_1"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edittext_border"
+        android:hint="Enter address"
+        android:textSize="17sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailIdEditText" />
+
+    <TextView
+        android:id="@+id/collegeTextView"
+        style="@style/style_1"
+        android:layout_width="100dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/college_name"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressTextView" />
+
+    <EditText
+        android:id="@+id/collegeEditText"
+        android:layout_height="45dp"
+        android:layout_width="240dp"
+        android:textSize="17sp"
+        android:hint="Enter college name"
+        android:background="@drawable/edittext_border"
+        style="@style/style_1"
+        app:layout_constraintTop_toBottomOf="@id/addressEditText"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/techTextView"
+        style="@style/style_1"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Tech"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collegeTextView" />
+
+    <EditText
+        android:id="@+id/techEditText"
+        android:layout_height="45dp"
+        android:layout_width="240dp"
+        android:textSize="17sp"
+        android:hint="Enter technology"
+        android:background="@drawable/edittext_border"
+        style="@style/style_1"
+        app:layout_constraintTop_toBottomOf="@id/collegeEditText"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/passingTextView"
+        style="@style/style_1"
+        android:layout_width="120dp"
+        android:layout_height="53dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/year_of_passing"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/techTextView" />
+
+    <EditText
+        android:id="@+id/passingEditText"
+        android:layout_height="45dp"
+        android:layout_width="240dp"
+        android:textSize="17sp"
+        android:hint="Enter year of passing"
+        android:background="@drawable/edittext_border"
+        android:inputType="number"
+        android:maxLength="4"
+        style="@style/style_1"
+        app:layout_constraintTop_toBottomOf="@id/techEditText"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Submit"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passingTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
